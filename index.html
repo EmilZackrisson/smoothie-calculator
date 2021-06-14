@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Juice Kalkylator</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+
+<body>
+    <header>Juice Kalkylator</header>
+
+    <label for="bas">Välj din bas: </label>
+    <select name="bas" id="bas_opt" onchange="valt()">
+        <option value="Vatten">Vatten</option>
+        <option value="Cola">Cola</option>
+    </select>
+
+    <label for="bland">Välj något att blanda med: </label>
+    <select name="bland" id="bland_opt" onchange="valt()">
+        <option value="Inget">--Inget--</option>
+        <option value="Cola">Cola</option>
+    </select>
+
+    <label for="extra">Välj något extra: </label>
+    <select name="extra" id="extra_opt" onchange="valt()">
+        <option value="Inget">--Inget--</option>
+        <option value="Cola">Cola</option>
+    </select>
+
+    <p>Du har valt: </p>
+    <p id="chosen"></p>
+
+
+    <script src="app.js"></script>
+</body>
+
+</html>
