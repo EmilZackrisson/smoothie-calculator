@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 
 * {
-    margin: 0 0;
     font-family: 'Lato', sans-serif;
+    box-sizing: border-box;
 }
 
 header {
@@ -12,17 +12,26 @@ header {
     font-family: 'Lato', sans-serif;
     padding: 10px;
     background-color: #004080;
+    padding: 10px 20px;
 }
 
 body {
     text-align: center;
     background-color: #0066cc;
+    margin: 0;
 }
 
 p {
     color: white;
     font-family: 'Lato', sans-serif;
     font-size: 30px;
+    margin-top: 30px;
+}
+
+a {
+    color: white;
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
     margin-top: 30px;
 }
 
@@ -36,4 +45,9 @@ label {
 select {
     margin-top: 10px;
     font-size: 20px;
+}
+
+#header-logo {
+    height: 40px;
+    float: left;
 }

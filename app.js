@@ -26,9 +26,9 @@ function calculate(bas, bland, extra){
     }
 
     switch(bland){
-        case "Inget":
+        case "Ingen":
             blandTot = 0;
-            console.log("Inget")
+            console.log("Ingen")
             break;
         case "Cola":
             blandTot = Cola;

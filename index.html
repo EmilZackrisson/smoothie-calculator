@@ -9,7 +9,13 @@
 </head>
 
 <body>
-    <header>Smoothie Kalkylator</header>
+
+    
+
+    <header>
+        <img id="header-logo" src="logo.png">
+        Smoothie Kalkylator
+    </header>
 
     <label for="bas">Välj din bas: </label>
     <select name="bas" id="bas_opt" onchange="valt()">
@@ -21,7 +27,7 @@
 
     <label for="bland">Välj något att blanda med: </label>
     <select name="bland" id="bland_opt" onchange="valt()">
-        <option value="Inget">--Inget--</option>
+        <option value="Ingen">--Inget--</option>
         <option value="Cola">Cola</option>
     </select>
 
@@ -34,8 +40,9 @@
         <option value="Cola">Cola</option>
     </select>
 
-    <p id="totaltP"></p>
+    <p id="totaltP">Du måste välja något ovan.</p>
 
+    <p id="order"></p>
 
 
     <script src="app.js"></script>
