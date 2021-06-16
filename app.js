@@ -1,15 +1,16 @@
-
-
 var basTot = 0;
 var blandTot = 0;
 var extraTot = 0;
+
 var basCalc = 0;
 var blandCalc = 0;
 var extraCalc = 0;
+
 var tot = 0;
 var storlek = 0;
+
 const Vatten = 0; // 100 ml
-const Cola = 63; // 100 ml
+const Cola = 42; // 100 ml
 
 function valt(){
     var bas_opt = document.getElementById("bas_opt").value;
@@ -67,24 +68,4 @@ function calculate(bas_opt, bland_opt, extra_opt, storlek){
     document.getElementById("totaltP").innerHTML = ("Totalt antal kalorier: " + tot);
     //storlek(basCalc, blandCalc, extraCalc);
 
-}
-
-function storlek(basCalc, blandCalc, extraCalc){
-  switch (storlek) {
-    case ("150ml"):
-      basTot = basCalc * 1.5;
-      console.log("jag är 150ml");
-      break;
-    case ("250ml"):
-      basTot = basCalc * 2.5;
-      console.log("jag är 250ml");
-      break;
-
-  }
-
-
-  tot = basTot + blandTot + extraTot;
-  console.log("Totalt: ", tot);
-
-  document.getElementById("totaltP").innerHTML = ("Totalt antal kalorier: " + tot);
 }
