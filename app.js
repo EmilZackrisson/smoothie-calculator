@@ -3,50 +3,88 @@
 var basTot = 0;
 var blandTot = 0;
 var extraTot = 0;
+var basCalc = 0;
+var blandCalc = 0;
+var extraCalc = 0;
 var tot = 0;
-const Vatten = 0;
-const Cola = 50;
+var storlek = 0;
+const Vatten = 0; // 100 ml
+const Cola = 63; // 100 ml
 
 function valt(){
-    var bas = document.getElementById("bas_opt").value;
-    var bland = document.getElementById("bland_opt").value;
-    var extra = document.getElementById("extra_opt").value;
-    var storlek = document.getElementById("storlek_opt").value;
+    var bas_opt = document.getElementById("bas_opt").value;
+    var bland_opt = document.getElementById("bland_opt").value;
+    var extra_opt = document.getElementById("extra_opt").value;
+    var storlek_opt = document.getElementById("storlek_opt").value;
 
-    calculate(bas, bland, extra, storlek);
+    switch (storlek_opt) {
+      case "150ml":
+        storlek = 1.5;
+        break;
+      case "250ml":
+        storlek = 2.5;
+        break;
+
+    }
+
+
+    calculate(bas_opt, bland_opt, extra_opt, storlek);
 }
 
-function calculate(bas, bland, extra){
-    switch(bas){
+function calculate(bas_opt, bland_opt, extra_opt, storlek){
+    switch(bas_opt){
         case "Vatten":
-            basTot = Vatten;
+            basCalc = Vatten * storlek;
+            console.log("jag är vatten");
             break;
         case "Cola":
-            basTot = Cola;
+            basCalc = Cola * storlek;
+            console.log("jag är cola");
+            console.log(basCalc);
             break;
     }
 
-    switch(bland){
+    switch(bland_opt){
         case "Ingen":
-            blandTot = 0;
+            blandCalc = 0;
             break;
         case "Cola":
-            blandTot = Cola;
+            blandCalc = Cola;
             break;
     }
 
-    switch(extra){
+    switch(extra_opt){
         case "Inget":
-            extraTot = 0;
+            extraCalc = 0;
             break;
         case "Cola":
-            extraTot = Cola;
+            extraCalc = Cola;
             break;
     }
 
-    var tot = basTot + blandTot + extraTot;
-    console.log("Totalt: ", tot);
 
+    tot = basCalc + blandCalc + extraCalc;
     document.getElementById("totaltP").innerHTML = ("Totalt antal kalorier: " + tot);
+    //storlek(basCalc, blandCalc, extraCalc);
 
+}
+
+function storlek(basCalc, blandCalc, extraCalc){
+  switch (storlek) {
+    case ("150ml"):
+      basTot = basCalc * 1.5;
+      console.log("jag är 150ml");
+      break;
+    case ("250ml"):
+      basTot = basCalc * 2.5;
+      console.log("jag är 250ml");
+      break;
+
+  }
+
+
+  tot = basTot + blandTot + extraTot;
+  console.log("Totalt: ", tot);
+
+  document.getElementById("totaltP").innerHTML = ("Totalt antal kalorier: " + tot);
 }
