@@ -1,3 +1,5 @@
+
+
 var basTot = 0;
 var blandTot = 0;
 var extraTot = 0;
@@ -9,41 +11,36 @@ function valt(){
     var bas = document.getElementById("bas_opt").value;
     var bland = document.getElementById("bland_opt").value;
     var extra = document.getElementById("extra_opt").value;
+    var storlek = document.getElementById("storlek_opt").value;
 
-    calculate(bas, bland, extra);
+    calculate(bas, bland, extra, storlek);
 }
 
 function calculate(bas, bland, extra){
     switch(bas){
         case "Vatten":
             basTot = Vatten;
-            console.log("vatten")
             break;
         case "Cola":
             basTot = Cola;
-            console.log("cola")
             break;
     }
 
     switch(bland){
         case "Ingen":
             blandTot = 0;
-            console.log("Ingen")
             break;
         case "Cola":
             blandTot = Cola;
-            console.log("Cola")
             break;
     }
 
     switch(extra){
         case "Inget":
             extraTot = 0;
-            console.log("Extra: Inget");
             break;
         case "Cola":
             extraTot = Cola;
-            console.log("Extra: Cola");
             break;
     }
 
