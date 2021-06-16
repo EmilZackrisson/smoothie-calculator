@@ -5,19 +5,18 @@
     box-sizing: border-box;
 }
 
-header {
-    text-align: center;
-    font-size: 40px;
-    color: white;
-    font-family: 'Lato', sans-serif;
-    padding: 10px;
-    background-color: #004080;
-    padding: 10px 20px;
+.header-img{
+  width: 100%;
+  overflow: hidden;
+  background-image: url("header-img.jpg");
+  background-position: center;
+  height: auto;
 }
+
 
 body {
     text-align: center;
-    background-color: #0066cc;
+    background-color: #003D6C;
     margin: 0;
 }
 
@@ -35,6 +34,10 @@ a {
     margin-top: 30px;
 }
 
+h1{
+  color: white
+}
+
 label {
     color: white;
     font-family: 'Lato', sans-serif;
@@ -47,7 +50,8 @@ select {
     font-size: 20px;
 }
 
-#header-logo {
-    height: 40px;
-    float: left;
+.content {
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 20px
 }
