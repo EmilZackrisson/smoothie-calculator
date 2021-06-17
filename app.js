@@ -12,6 +12,19 @@ var storlek = 0;
 const Vatten = 0; // 100 ml
 const Cola = 42; // 100 ml
 
+myJSON = { "baser" : [
+  {"namn" : "Äpplemust", "energi" : 45, "fett" : 0.1, "mättat-fett" : 0, "fleromättat-fett" : 0, "kolhydrat" : 10, "varav-sockerarter" : 10, "protein" : 0.1, "fiber" : 1, "salt" : 0},
+  {"namn" : "Vatten", "energi" : 0, "fett" : 0, "mättat-fett" : 0, "fleromättat-fett" : 0, "kolhydrat" : 0, "varav-sockerarter" : 0, "protein" : 0, "fiber" : 0, "salt" : 0}
+],
+  "bland" : [
+    {"namn" : "Äpplemust", "energi" : 45, "fett" : 0.1, "mättat-fett" : 0, "fleromättat-fett" : 0, "kolhydrat" : 10, "varav-sockerarter" : 10, "protein" : 0.1, "fiber" : 1, "salt" : 0},
+    {"namn" : "Vatten", "energi" : 0, "fett" : 0, "mättat-fett" : 0, "fleromättat-fett" : 0, "kolhydrat" : 0, "varav-sockerarter" : 0, "protein" : 0, "fiber" : 0, "salt" : 0}
+  ]
+};
+
+console.log(myJSON.baser);
+console.log(myJSON.bland);
+
 function valt(){
     var bas_opt = document.getElementById("bas_opt").value;
     var bland_opt = document.getElementById("bland_opt").value;
